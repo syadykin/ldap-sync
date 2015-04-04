@@ -1,0 +1,23 @@
+{
+  "connection": {
+    "uri": "ldap:///",
+    "version": 3,
+    "starttls": false,
+    "connecttimeout": -1,
+    "timeout": 5000,
+    "reconnect": true,
+    "backoffmax": 32
+  },
+  "bind": {
+    "binddn": "",
+    "password": ""
+  },
+  "sync": {
+    "base": "",
+    "scope": 0,
+    "filter": "(objectClass=*)",
+    "attrs": "* +",
+    "rid": "000"
+  },
+  "backends": []
+}

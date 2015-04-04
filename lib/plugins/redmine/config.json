@@ -1,0 +1,6 @@
+{
+  "url": "http://localhost/redmine",
+  "key": "secret",
+  "auth_source_id": 0,
+  "domain": "domain.com"
+}

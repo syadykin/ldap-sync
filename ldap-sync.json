@@ -1,0 +1,25 @@
+{
+  "connection": {
+    "uri": "ldap://ldap"
+  },
+  "bind": {
+    "binddn": "cn=Manager,dc=terricone,dc=com",
+    "password": "gfhjkm135"
+  },
+  "sync": {
+    "base": "ou=People,dc=terricone,dc=com",
+    "scope": 1,
+    "filter": "(objectClass=posixAccount)"
+  },
+  "backends": [
+    {
+      "plugin": "redmine",
+      "config": {
+        "key": "769ca62caf01f2999d6ddb6f24f534ee6100f6b0",
+        "url": "https://dev.terricone.com/tasks",
+        "auth_source_id": 1,
+        "domain": "terricone.com"
+      }
+    }
+  ]
+}
