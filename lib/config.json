@@ -19,5 +19,9 @@
     "attrs": "* +",
     "rid": "000"
   },
+  "log": {
+    "file": null,
+    "mail": null
+  },
   "backends": []
 }

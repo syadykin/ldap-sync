@@ -15,4 +15,4 @@ try {
   extend(true, config, require('../ldap-sync.json'));
 } catch(e) {}
 
-ldapSync(config);
+ldapSync(config, function(err, config, run) { run(); });
