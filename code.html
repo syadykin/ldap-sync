@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your verification code</title>
+    <style type="text/css">
+        div {
+            margin: 5% 10%;
+        }
+        #code {
+            font-size: 25px;
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Copy this text and paste to console:</p>
+        <input id="code" />
+    </div>
+    <script>
+        (function() {
+            var i = document.getElementById('code');
+            i.value = decodeURIComponent(
+                window.location.search.replace(/.*?code=([^&]+).*?/, '$1'));
+            i.select();
+        }());
+    </script>
+</body>
+</html>
