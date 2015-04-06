@@ -8,7 +8,7 @@ Installation
 
 You can install this software using npm into a global context:
 
-       sudo npm install git+https://github.com/conversionscience/ldap-sync.git -g
+    sudo npm install git+https://github.com/conversionscience/ldap-sync.git -g
 
 Configuration
 -------------
@@ -109,7 +109,7 @@ Plugin could be used for synchronization between LDAP and google apps driven ema
     }
 
 where:
-* ```domain`` is an applications domain
+* ```domain``` is an applications domain
 * ```serviceEmail``` is given after application key create
 * ```keyFile``` is a *pem* certificate provided by google
 * ```accountEmail``` is user email which will be used as an admin (with corresponding permissions)
@@ -119,7 +119,5 @@ How to obtain certificate and other stuff from google:
 1. You must log into  developer console and create a project here: https://console.developers.google.com/project
 2. Then go to «APIs» section and add *Admin SDK*, the rest could be removed.
 3. Navigate to «Credentials section and create new Client ID (pick Service Account). Your settings json file will be automatically downloaded. I'd recommend you to create a new p12 key file (it will go as an *.p12 from beginning) and delete previous one.
-4. Now you need to convert p12 certificate to pem:
-       openssl pkcs12 -in your-certificate.p12 -nocerts -passin pass:notasecret -nodes -out key.pem
-and put the resulting file somewhere on fs — the path will be used in configuration.
-5. Next is to give this Client ID permissions. Go to your domain admin and click on «Security» chapter, pick the «Advanced settings» (you may need to click «Show more» link) and choose «Manage API client access» in the opened list. Put into «Cliend ID» field value obtained from client json downloaded after client ID creation, usually it looks like a domain name:    ```50...287-khq...ehr4.apps.googleusercontent.com```. Fill the «API scopes» field with the next text: ```https://www.googleapis.com/auth/admin.directory.user,https://www.googleapis.com/auth/admin.directory.user.security``` and press «Authorize». You're done with google apps setup.
+4. Now you need to convert p12 certificate to pem using ```openssl pkcs12 -in your-certificate.p12 -nocerts -passin pass:notasecret -nodes -out key.pem``` and put the resulting file somewhere on fs — the path will be used in configuration.
+5. Next is to give this Client ID permissions. Go to your domain admin and click on «Security» chapter, pick the «Advanced settings» (you may need to click «Show more» link) and choose «Manage API client access» in the opened list. Put into «Cliend ID» field value obtained from client json downloaded after client ID creation, usually it looks like a domain name: ```50...287-khq...ehr4.apps.googleusercontent.com```. Fill the «API scopes» field with the next text: ```https://www.googleapis.com/auth/admin.directory.user,https://www.googleapis.com/auth/admin.directory.user.security``` and press «Authorize». You're done with google apps setup.
